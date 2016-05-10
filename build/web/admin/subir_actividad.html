@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <link rel="stylesheet" href="../style.css" type="text/css"/>
+        <link rel="stylesheet" href="../pruebacss.css" type="text/css"/>
+        
+
+        <title>Formulario para subir actividad</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="../js/desplegable.js"></script>
+    </head>
+    <body>
+        <header >
+            <img src="../Imagenes/logo.png" alt="Logo">
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../sobre_nosotros.html">Sobre nosotros</a></li>
+                    <li><a href="../noticias.html">Noticias</a></li>
+                    <li><a href="../actividades.html">Actividades</a></li>
+                    <li><a href="../apunt_donacion.html">Apuntate/Donaciones</a></li>
+                    <li><div class="dropdown">
+                        <a onclick="myFunction()" class="dropbtn">Login miembros</a>
+                        <div id="myDropdown" class="dropdown-content">
+                            <form name="login" action="apunt_donacion.html" method="POST">
+                                <input type="text" class="input-login" name="usuario" placeholder="usuario"  maxlength="50">
+                                <input type="password" class="input-login" name="contrasena" placeholder="contraseña" maxlength="50">
+                            <input class="sub2" type="submit" value="Login"  name="enviar" />
+                            </form>
+                        </div>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <section class="content">
+            
+            <h1>Subir actividad nueva</h1>
+            
+            <br>
+            <form name="subir-noticia" action="subir-noticia" method="POST" enctype="multipart/form-data">
+                
+                <label class="label">Nombre Actividad</label>
+                <input type="text" name="titulo"  ><br>
+                
+                <label class="label">Lugar</label>
+                <input type="text" name="lugar"  ><br>
+                
+                <label class="label">Fecha</label>
+                <input type="date" name="fecha" value=""/><br>
+                
+                <label class="label">Etiquetas</label>
+                <input type="text" name="etiquetas"  placeholder="Sepárelas por espacios"><br>
+        
+                <label class="label">Subir imagen de la actividad</label>
+                <input type="file" name="file" ><br><br>
+                <div class="clearflx"></div>
+                
+                <label class="label">Texto de la actividad</label><br>
+                <textarea cols="100" rows="20" placeholder="Texto de la actividad"></textarea>
+                <div class="clearflx"></div>
+                <input type="submit" value="Publicar actividad" class="form" name="enviar" />
+            </form>
+            
+            
+        </section>
+            <footer>Pie de pagina</footer>
+        
+    </body>
+</html>
